@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * connect to the database
+ * @return PDO
+ */
 function getDb():PDO
 {
     $db = new PDO('mysql:host=db; dbname=helen-collection', 'root', 'password');
