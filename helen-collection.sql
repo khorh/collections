@@ -6,8 +6,8 @@
 # https://github.com/sequelpro/sequelpro
 #
 # Host: 127.0.0.1 (MySQL 5.7.33)
-# Database: helen-collections
-# Generation Time: 2021-03-29 11:10:23 +0000
+# Database: helen-collection
+# Generation Time: 2021-03-30 13:52:56 +0000
 # ************************************************************
 
 
@@ -31,7 +31,7 @@ CREATE TABLE `products` (
   `image` varchar(255) NOT NULL DEFAULT '',
   `product_name` varchar(255) NOT NULL DEFAULT '',
   `business_name` varchar(255) NOT NULL DEFAULT '',
-  `currency` enum('£','$') DEFAULT NULL,
+  `currency` varchar(3) DEFAULT NULL,
   `price` float(3,2) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -41,12 +41,12 @@ LOCK TABLES `products` WRITE;
 
 INSERT INTO `products` (`id`, `image`, `product_name`, `business_name`, `currency`, `price`)
 VALUES
-	(1,'images/wa-cafe-matcha-roll.jpg','Matcha Roll','WA Cafe','£',4.30),
-	(2,'images/tombo-london-sundae.jpg','London Sundae','Tombo','£',6.60),
-	(3,'images/ichiba-matcha-cookies.jpg','Matcha Cookies','Ichiba','£',4.99),
-	(4,'images/sakurado-matcha-mille-crepe-cake.jpg','Matcha Mille Crepe Cake','Sakurado','£',6.50),
-	(5,'images/wa-cafe-rusk-matcha.jpg','Rusk Matcha','WA Cafe','£',5.00),
-	(6,'images/japan-centre-matcha-green-tea-melon.webp','Matcha Green Tea Melon Pan','Japan Centre','£',2.99);
+	(1,'images/wa-cafe-matcha-roll.jpg','Matcha Roll','WA Cafe','GBP',4.30),
+	(2,'images/tombo-london-sundae.jpg','London Sundae','Tombo','GBP',6.60),
+	(3,'images/ichiba-matcha-cookies.jpg','Matcha Cookies','Ichiba','GBP',4.99),
+	(4,'images/sakurado-matcha-mille-crepe-cake.jpg','Matcha Mille Crepe Cake','Sakurado','GBP',6.50),
+	(5,'images/wa-cafe-rusk-matcha.jpg','Rusk Matcha','WA Cafe','GBP',5.00),
+	(6,'images/japan-centre-matcha-green-tea-melon.webp','Matcha Green Tea Melon Pan','Japan Centre','GBP',2.99);
 
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
