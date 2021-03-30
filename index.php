@@ -22,9 +22,9 @@ $productsToDisplay = displayAllProducts($products);
             <h1>Matcha</h1>
         </header>
         <main>
-                <?php
-                echo $productsToDisplay;
-                ?>
+            <?php
+            echo $productsToDisplay;
+            ?>
         </main>
     </body>
 </html>

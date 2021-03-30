@@ -3,21 +3,32 @@
 require '../functions.php';
 use PHPUnit\Framework\TestCase;
 class Functions extends TestCase {
-    public function testFailureCheckProduct()
+    public function testSuccessDisplayProduct()
     {
         //expected result of the test
-        $expected = 'key missing from array';
+        $expected = '<div class="product"><div class="photo"><img src="/test.jpg" alt="food" /></div>';
+        $expected .= '<h2>test name</h2>';
+        $expected .= '<p>test business name</p>';
+        $expected .= '<p>GBP100</p></div>';
+
         //Inputs to get the expected result
-        $input = ['name' => 'Matcha Roll'];
+        $input = [
+            'image' => '/test.jpg',
+            'product_name' => 'test name',
+            'business_name' => 'test business name',
+            'currency' => 'GBP',
+            'price' => '100',
+        ];
         //run the real function and pass in the inputs
-        $case = checkProduct($input);
+        $case = displayProduct($input);
         //compare the expected result to the actual result
         $this->assertEquals($expected, $case);
     }
-    public function testMalformedDeclareWinner()
+
+    public function testMalformedDisplayProduct()
     {
         $input = 3;
         $this->expectException(TypeError::class);
-        checkProduct($input);
+        displayProduct($input);
     }
 }

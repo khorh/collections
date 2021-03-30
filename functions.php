@@ -32,18 +32,11 @@ function displayAllProducts($products) {
  * @param $product
  * @return string
  */
-function displayProduct($product) {
+function displayProduct(array $product): string
+{
     $result = '<div class="product"><div class="photo"><img src="' . $product['image'] . '" alt="food" /></div>';
     $result .= '<h2>' . $product['product_name'] . '</h2>';
     $result .= '<p>' . $product['business_name'] . '</p>';
     $result .= '<p>' . $product['currency'] . $product['price'] . '</p></div>';
     return $result;
-}
-
-function checkProduct(array $product) {
-    if(array_key_exists('name', $player)) {
-        return $product;
-    } else {
-        return 'key missing from array';
-    }
 }
