@@ -5,26 +5,8 @@ require_once 'db-connection.php';
 require_once 'functions.php';
 $db = getDb();
 
-if(isset($_POST['submit']))
-{
-    $image = $_POST['image'];
-    $productName = $_POST['product_name'];
-    $businessName = $_POST['business_name'];
-    $currency = $_POST['currency'];
-    $price = $_POST['price'];
-    $sql = "INSERT INTO products (image, product_name, business_name, currency, price)
-     VALUES ('$image', '$productName', '$businessName','$currency', '$price')";
-    if (mysqli_query($conn, $sql)) {
-        echo "New record has been added successfully !";
-    } else {
-        echo "Error: " . $sql . ":-" . mysqli_error($conn);
-    }
-    mysqli_close($conn);
-}
-
 ?>
 
-<!DOCTYPE html>
 <html lang="en-GB">
     <head>
         <title>Matcha Collection</title>
@@ -40,15 +22,15 @@ if(isset($_POST['submit']))
         <main>
             <form method="post" action="add-matcha.php">
                 <label for="image">Upload image *</label>
-                <input type="file" name="image" required />
+                <input type="text" id="image" name="image" required />
                 <label for="product_name">Product name *</label>
-                <input type="text" name="product_name" required />
+                <input type="text" id="product_name" name="product_name" required />
                 <label for="business_name">Business name *</label>
-                <input type="text" name="business_name" required />
+                <input type="text" id="business_name" name="business_name" required />
                 <label for="currency">Currency e.g GBP *</label>
-                <input type="text" name="currency" required />
+                <input type="text" id="currency" name="currency" required />
                 <label for="price">Price *</label>
-                <input type="text" name="price" required />
+                <input type="number" id="price" name="price" step="0.01" min="0" required />
                 <input type="submit" value="SUBMIT" />
             </form>
         </main>

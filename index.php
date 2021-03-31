@@ -8,7 +8,6 @@ $products = getProducts($db);
 $productsToDisplay = displayAllProducts($products);
 ?>
 
-<!DOCTYPE html>
 <html lang="en-GB">
     <head>
         <title>Matcha Collection</title>
