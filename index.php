@@ -21,6 +21,7 @@ $productsToDisplay = displayAllProducts($products);
         <header>
             <h1>Matcha</h1>
             <h2>A collection of desserts with matcha in London</h2>
+            <a href="add-matcha.php" class="button">ADD MATCHA</a>
         </header>
         <main>
             <?= $productsToDisplay; ?>
