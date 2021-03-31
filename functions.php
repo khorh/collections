@@ -19,7 +19,7 @@ return $query->fetchAll();
  * @param $products
  * @return string
  */
-function displayAllProducts($products) {
+function displayAllProducts(array $products): string {
     $result = '';
     foreach ($products as $product) {
         $result .= displayProduct($product);
@@ -40,3 +40,6 @@ function displayProduct(array $product): string
     $result .= '<p>' . $product['currency'] . $product['price'] . '</p></div>';
     return $result;
 }
+
+$addMatcha = "INSERT INTO products (images, product_name, business_name, currency, price)
+VALUES ";

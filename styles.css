@@ -10,14 +10,30 @@ body {
 
 h1 {
     font-size: 1rem;
+    line-height: 1rem;
 }
 
 h2 {
     font-size: 0.5rem;
+    line-height: 0.5rem;
 }
 
 p {
     font-size: 0.4rem;
+    line-height: 0.4rem;
+}
+
+.button {
+    text-decoration: none;
+    font-size: 0.4rem;
+    font-weight: 600;
+    color: #000000;
+    padding: 12px 24px;
+    background-color: #c3d4a5;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 32px;
+    cursor: pointer;
 }
 
 main {
@@ -28,7 +44,7 @@ main {
 .product {
     border: 1px solid #F2F2F2;
     padding: 16px;
-    margin: 0 16px 16px 0;
+    margin: 32px 16px 16px 0;
 }
 
 .photo {
@@ -40,3 +56,40 @@ main {
 img {
     height: 100%;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #F2F2F2;
+    padding: 32px;
+    margin: 32px 16px 16px 0;
+}
+
+label {
+    font-size: 0.4rem;
+    line-height: 1.2rem;
+    font-weight: 600;
+}
+
+input {
+    font-size: 0.4rem;
+    padding: 6px 12px;
+}
+
+input[type=text] {
+    border: 1px solid #c3d4a5;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    text-decoration: none;
+    font-weight: 600;
+    color: #000000;
+    padding: 12px 24px;
+    background-color: #c3d4a5;
+    border: none;
+    border-radius: 4px;
+    margin-top: 32px;
+    cursor: pointer;
+}
+

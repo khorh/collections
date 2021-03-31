@@ -20,11 +20,11 @@ $productsToDisplay = displayAllProducts($products);
     <body>
         <header>
             <h1>Matcha</h1>
+            <h2>A collection of desserts with matcha in London</h2>
+            <a href="add-matcha.php" class="button">ADD MATCHA</a>
         </header>
         <main>
-            <?php
-            echo $productsToDisplay;
-            ?>
+            <?= $productsToDisplay; ?>
         </main>
     </body>
 </html>
