@@ -40,6 +40,3 @@ function displayProduct(array $product): string
     $result .= '<p>' . $product['currency'] . $product['price'] . '</p></div>';
     return $result;
 }
-
-$addMatcha = "INSERT INTO products (images, product_name, business_name, currency, price)
-VALUES ";
