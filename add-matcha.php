@@ -5,6 +5,13 @@ require_once 'db-connection.php';
 require_once 'functions.php';
 $db = getDb();
 
+function addMatcha(PDO $db)
+{
+    $query = $db->prepare("INSERT INTO products (image, product_name, business_name, currency, price)
+    VALUES (:image, :productName, :businessName,:currency, :price)");
+    $query->bindParam(':image', $image[]);
+}
+
 ?>
 
 <html lang="en-GB">
@@ -31,7 +38,7 @@ $db = getDb();
                 <input type="text" id="currency" name="currency" required />
                 <label for="price">Price *</label>
                 <input type="number" id="price" name="price" step="0.01" min="0" required />
-                <input type="submit" value="SUBMIT" />
+                <input type="submit" name="submit" value="SUBMIT" />
             </form>
         </main>
     </body>
